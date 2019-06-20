@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: justinkaufmanpipelinesdotnetcoredocker 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: justinkaufmanpipelinesdotnetcoredocker 
+    spec:
+      containers:
+        - name: justinkaufmanpipelinesdotnetcoredocker 
+          image: apiloyaltyacr.azurecr.io/justinkaufmanpipelinesdotnetcoredocker 
+          ports:
+          - containerPort: 8811
